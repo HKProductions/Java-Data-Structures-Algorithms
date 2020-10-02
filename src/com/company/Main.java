@@ -22,6 +22,8 @@ public class Main {
 
         // Searching Algorithm Testing
         testLinearSearch();
+        testBinarySearch();
+        testNaiveStringSearch();
     }
 
     public static void testValidAnagram(){
@@ -156,5 +158,37 @@ public class Main {
         System.out.println(sa.linearSearch(test3, 200));
         System.out.println(sa.linearSearch(test5, 15));
 
+    }
+
+    public static void testBinarySearch(){
+        SearchAlgorithm sa = new SearchAlgorithm();
+
+        int[] test1 = {10,15,20,25,30};
+        int[] test2 = {0,1,2,3,4,5,6,7,8,9};
+        int[] test3 = {100};
+        int[] test4 = {1,2,3,4,5};
+        int[] test5 = {};
+
+        System.out.println("\nBinary Search test:");
+        System.out.println(sa.binarySearch(test1, 15));
+        System.out.println(sa.binarySearch(test2, 4));
+        System.out.println(sa.binarySearch(test3, 100));
+        System.out.println(sa.binarySearch(test4, 6));
+        System.out.println(sa.binarySearch(test2, 10));
+        System.out.println(sa.binarySearch(test3, 200));
+        System.out.println(sa.binarySearch(test5, 15));
+    }
+
+    public static void testNaiveStringSearch(){
+        SearchAlgorithm sa = new SearchAlgorithm();
+
+        System.out.println("\nNaive String Search test: ");
+        System.out.println(sa.naiveStringSearch("haha", "hahaiadfe advce hahapadce"));
+        System.out.println(sa.naiveStringSearch("h", "h"));
+        System.out.println(sa.naiveStringSearch("", "h"));
+        System.out.println(sa.naiveStringSearch("h", ""));
+        System.out.println(sa.naiveStringSearch("", ""));
+        System.out.println(sa.naiveStringSearch("hahaiadfe advce hahapadce", "haha"));
+        System.out.println(sa.naiveStringSearch("haiadfe advce hahapadce", "haha"));
     }
 }
