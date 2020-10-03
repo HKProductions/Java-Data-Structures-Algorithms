@@ -13,20 +13,24 @@ public class Main {
         testAveragePair();
         testIsSubsequence();
 
-        // Recursive Function Testing
+        // Recursive Functions Testing
         testPowerRec();
         testFactorial();
         testProductOfArrayList();
         testRecursiveRange();
         testFib();
 
-        // Searching Algorithm Testing
+        // Searching Algorithms Testing
         testLinearSearch();
         testBinarySearch();
         testNaiveStringSearch();
+
+        // Sorting Algorithms Testing
+        testBubbleSort();
+        testSelectionSort();
     }
 
-    public static void testValidAnagram(){
+    private static void testValidAnagram(){
         commonProblemSolvingMethods cpsm = new commonProblemSolvingMethods();
 
         System.out.println("\nValidate Anagram Test: ");
@@ -40,7 +44,7 @@ public class Main {
         System.out.println(cpsm.validAnagram("texttwisttime", "timetwisttext"));
     }
 
-    public static void testCountUniqueValues(){
+    private static void testCountUniqueValues(){
         int[] test1 = {1,1,1,1,1,2};
         int[] test2 = {1,2,3,4,4,4,7,7,12,12,13};
         int[] test3 = {};
@@ -60,7 +64,7 @@ public class Main {
         System.out.println(cpsm.countUniqueValuesVer2(test4));
     }
 
-    public static void testAveragePair(){
+    private static void testAveragePair(){
         int[] test1 = {1,2,3};
         int[] test2 = {1,3,3,5,6,7,10,12,19};
         int[] test3 = {-1,0,3,4,5,6};
@@ -74,7 +78,7 @@ public class Main {
         System.out.println(cpsm.averagePair(test4, 4));
     }
 
-    public static void testIsSubsequence(){
+    private static void testIsSubsequence(){
         commonProblemSolvingMethods cpsm = new commonProblemSolvingMethods();
 
         System.out.println("\nIs Subsequence Test: ");
@@ -86,7 +90,7 @@ public class Main {
         System.out.println(cpsm.isSubsequence("help", ""));
     }
 
-    public static void testPowerRec(){
+    private static void testPowerRec(){
         recursion rec = new recursion();
 
         System.out.println("\nExponential power recursion test: ");
@@ -95,7 +99,7 @@ public class Main {
         System.out.println(rec.powerRec(2, 4));
     }
 
-    public static void testFactorial(){
+    private static void testFactorial(){
         recursion rec = new recursion();
 
         System.out.println("\nFactorial test: ");
@@ -105,7 +109,7 @@ public class Main {
         System.out.println(rec.factorial(7));
     }
 
-    public static void testProductOfArrayList(){
+    private static void testProductOfArrayList(){
         recursion rec = new recursion();
         ArrayList<Integer> test1 = new ArrayList<>(List.of(1,2,3));
         ArrayList<Integer> test2 = new ArrayList<>(List.of(1,2,3,10));
@@ -120,7 +124,7 @@ public class Main {
         System.out.println(rec.productOfArrayList(test4));
     }
 
-    public static void testRecursiveRange(){
+    private static void testRecursiveRange(){
         recursion rec = new recursion();
 
         System.out.println("\nRecursive Range test: ");
@@ -130,7 +134,7 @@ public class Main {
         System.out.println(rec.recursiveRange(-1));
     }
 
-    public static void testFib(){
+    private static void testFib(){
         recursion rec = new recursion();
 
         System.out.println("\nFibbonanchi test: ");
@@ -140,13 +144,13 @@ public class Main {
         System.out.println(rec.fib(35));
     }
 
-    public static void testLinearSearch(){
+    private static void testLinearSearch(){
         SearchAlgorithm sa = new SearchAlgorithm();
 
         int[] test1 = {10,15,20,25,30};
-        int[] test2 = {9,8,7,6,5,4,3,2,1,0};
+        int[] test2 = {19,15,9,8,7,6,5,4,3,2,1,0};
         int[] test3 = {100};
-        int[] test4 = {1,2,3,4,5};
+        int[] test4 = {1,2,3,4,5,6};
         int[] test5 = {};
 
         System.out.println("\nLinear Search test:");
@@ -160,7 +164,7 @@ public class Main {
 
     }
 
-    public static void testBinarySearch(){
+    private static void testBinarySearch(){
         SearchAlgorithm sa = new SearchAlgorithm();
 
         int[] test1 = {10,15,20,25,30};
@@ -179,7 +183,7 @@ public class Main {
         System.out.println(sa.binarySearch(test5, 15));
     }
 
-    public static void testNaiveStringSearch(){
+    private static void testNaiveStringSearch(){
         SearchAlgorithm sa = new SearchAlgorithm();
 
         System.out.println("\nNaive String Search test: ");
@@ -190,5 +194,82 @@ public class Main {
         System.out.println(sa.naiveStringSearch("", ""));
         System.out.println(sa.naiveStringSearch("hahaiadfe advce hahapadce", "haha"));
         System.out.println(sa.naiveStringSearch("haiadfe advce hahapadce", "haha"));
+    }
+
+    private static void testBubbleSort(){
+        SortingAlgorithm sa = new SortingAlgorithm();
+
+        int[] test1 = {1,15,2,3,8,30,81,5,10};
+        int[] test2 = {-1,15,-5,-16,51,-20};
+        int[] test3 = {0};
+        int[] test4 = {};
+        int[] test5 = {1,2,3,8,30,81,5,10};
+        int[] test6 = {-1,15,-5,-16,51,-20};
+        int[] test7 = {0};
+        int[] test8 = {};
+
+        test1 = sa.bubbleSortV1(test1);
+        test2 = sa.bubbleSortV1(test2);
+        test3 = sa.bubbleSortV1(test3);
+        test4 = sa.bubbleSortV1(test4);
+
+        test5 = sa.bubbleSortV2(test5);
+        test6 = sa.bubbleSortV2(test6);
+        test7 = sa.bubbleSortV2(test7);
+        test8 = sa.bubbleSortV2(test8);
+
+        System.out.print("\nBubble Sort Testing: ");
+        printArray(test1);
+        printArray(test2);
+        printArray(test3);
+        printArray(test4);
+
+        System.out.println();
+
+        System.out.print("\nBubble Sort Optimization Testing: ");
+        printArray(test5);
+        printArray(test6);
+        printArray(test7);
+        printArray(test8);
+
+        System.out.println();
+    }
+
+    private static void testSelectionSort(){
+        SortingAlgorithm sa = new SortingAlgorithm();
+
+        int[] test1 = {1,15,2,3,8,30,81,5,10};
+        int[] test2 = {-1,15,-5,-51,-16,51,-20};
+        int[] test3 = {0};
+        int[] test4 = {};
+        int[] test5 = {1,2,3,4,5,6,7,8};
+
+        test1 = sa.selectionSort(test1);
+        test2 = sa.selectionSort(test2);
+        test3 = sa.selectionSort(test3);
+        test4 = sa.selectionSort(test4);
+        test5 = sa.selectionSort(test5);
+
+        System.out.print("\nSelection Sort Testing: ");
+        printArray(test1);
+        printArray(test2);
+        printArray(test3);
+        printArray(test4);
+        printArray(test5);
+
+        System.out.println();
+    }
+
+    private static void printArray(int[] arr){
+        System.out.println();
+
+        if(arr.length <= 0){
+            System.out.print("This is an empty array");
+            return;
+        }
+
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
     }
 }

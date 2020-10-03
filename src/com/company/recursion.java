@@ -3,11 +3,15 @@ package com.company;
 import java.util.ArrayList;
 
 public class recursion {
-    // O(N) time & space complexity
-    // Simple power calculation using recursion to find the total
+    /*
+        O(N) time & space complexity
+        Simple power calculation using recursion to find the total
+     */
     public int powerRec(int base, int exp){
-        // Check to see if exponent value is 0
-            // If it is return 1
+        /*
+            Check to see if exponent value is 0
+                If it is return 1
+         */
         if(exp == 0)
             return 1;
 
@@ -16,8 +20,10 @@ public class recursion {
     }
 
     public int factorial(int val){
-        // Check to see if val is equal 1
-            // If it is return 1
+        /*
+            Check to see if val is equal 1
+                If it is return 1
+         */
         if(val <= 1)
             return val;
 
@@ -25,13 +31,17 @@ public class recursion {
         return val * factorial(val-1);
     }
 
-    // O(N) time and space complexity
-    // We will use an arraylist and recursion to calculate the overall product of an arrayList
+    /*
+        O(N) time and space complexity
+        We will use an arraylist and recursion to calculate the overall product of an arrayList
+     */
     public int productOfArrayList(ArrayList<Integer> nums){
-        // Check to see if arraylist size less than 1
-            // If so return 0
-        // Also check if arraylist size is equal to 1
-            // If so return single value
+        /*
+            Check to see if arraylist size less than 1
+                If so return 0
+            Also check if arraylist size is equal to 1
+                If so return single value
+         */
         if(nums.size() < 1)
             return 0;
         else if (nums.size() == 1)
@@ -40,24 +50,32 @@ public class recursion {
         // Get the value of the last index and store in local variable
         int temp = nums.get(nums.size()-1);
 
-        // Reduce the size of the arraylist by removing last variable
-        // This will only take O(1) time since we are removing from the end of the arrayList
+        /*
+            Reduce the size of the arraylist by removing last variable
+            Side note: This will only take O(1) time since we are removing from the end of the arrayLis
+         */
         nums.remove(nums.size()-1);
 
         // Multiple local temp value with returned value from productOfArray and return result
         return temp * productOfArrayList(nums);
     }
 
-    // O(N) time and space complexity
-    // This function will recurively find the sum of all integers between 0 and a possible max value
+    /*
+        O(N) time and space complexity
+        This function will recurively find the sum of all integers between 0 and a possible max value
+     */
     public int recursiveRange(int max){
-        // Check to see if max less than 0
-            // if so return 0
+        /*
+            Check to see if max less than 0
+                if so return 0
+         */
         if(max < 0)
             return 0;
 
-        // Check to see if max is less than or equal to 1
-            // Return max value
+        /*
+            Check to see if max is less than or equal to 1
+                Return max value
+         */
         if(max <= 1)
             return max;
 
@@ -67,8 +85,10 @@ public class recursion {
 
 
     public int fib(int num){
-        // Check to see if num is less than or equal to 2
-            // If so return 1
+        /*
+            Check to see if num is less than or equal to 2
+                If so return 1
+         */
         if(num <= 2)
             return 1;
 
