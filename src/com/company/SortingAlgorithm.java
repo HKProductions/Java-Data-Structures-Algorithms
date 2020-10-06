@@ -6,6 +6,8 @@ public class SortingAlgorithm {
         O(N^2) time complexity
         O(1) space complexity
         This is my implementation of bubble sort on a specific type of array using the classic traditional implementation4
+
+        TODO: Make the function more generic to be used for other array types
      */
     public int[] bubbleSortV1(int[] nums){
         /*
@@ -31,7 +33,7 @@ public class SortingAlgorithm {
             }
         }
 
-        // return nums
+        // return the sorted array
         return nums;
     }
 
@@ -40,6 +42,8 @@ public class SortingAlgorithm {
         O(1) space complexity
         This is my implementation of bubble sort on a specific type of array using a slight optimization to
             check if we already sorted the array completely before reaching end of array
+
+        TODO: Make the function more generic to be used for other array types
      */
     public int[] bubbleSortV2(int[] nums){
         /*
@@ -74,7 +78,7 @@ public class SortingAlgorithm {
                 return nums;
         }
 
-        // return nums
+        // return the sorted array
         return nums;
     }
 
@@ -82,6 +86,8 @@ public class SortingAlgorithm {
         O(N^2) time complexity
         O(1) space complexity
         This is my implementation of the selection sort algorithm using a specific array type to sort it
+
+        TODO: Make the function more generic to be used for other array types
      */
     public int[] selectionSort(int[] nums){
         /*
@@ -114,7 +120,42 @@ public class SortingAlgorithm {
             }
         }
 
-        // Return nums array
+        // Return the sorted nums array
+        return nums;
+    }
+
+    /*
+        O(N^2) time complexity
+        O(1) space complexity
+        This is my implementation of the insertion sort algorithm
+
+        TODO: Make the function more generic to be used for other array types
+     */
+    public int[] insertionSort(int[] nums){
+        /*
+            Check to see if nums array is less than or equal to 1
+                If so return nums array as it is
+         */
+        if(nums.length <= 1)
+            return nums;
+
+        /*
+            Have a for loop that starts from the second element and goes to the end
+                Store the value at that index in a temp variable
+                Have another for loop that starts from where the previous for loop is at and goes backwards till it gets to the start of the array
+                    Check to see if the temp variable is less than the current value for the second for loop index
+                        If it is swap the values
+
+         */
+        for(int i = 1; i < nums.length; i++){
+            for(int j = i; j > 0 && nums[j] < nums[j-1]; j--){
+                int currVal = nums[j];
+                nums[j] = nums[j-1];
+                nums[j-1] = currVal;
+            }
+        }
+
+        //Return the sorted array
         return nums;
     }
 }

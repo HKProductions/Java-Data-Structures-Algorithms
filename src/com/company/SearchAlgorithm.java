@@ -6,6 +6,8 @@ public class SearchAlgorithm {
         O(N) time complexity
         O(1) space complexity
         This is my implementation of the linear search algorithm for searching through an array
+
+        TODO: Make the function more generic to be used for other array types
      */
     public int linearSearch(int[] nums, int target){
         /*
@@ -33,6 +35,8 @@ public class SearchAlgorithm {
         O(log N) time complexity
         O(1) space complexity
         This is my implementation of the binary search algorithm to search for a specfic input in a sorted array
+
+        TODO: Make the function more generic to be used for other array types
      */
     public int binarySearch(int[] nums, int target){
         /*
@@ -77,6 +81,8 @@ public class SearchAlgorithm {
         O(N + M) time complexity
         O(1) space complexity
         This is my implemenation of a naive string search to see how many occurances of a specific string appear in the second string
+
+        TODO: Make the function more generic to be used for other array types
      */
     public int naiveStringSearch(String s1, String s2){
         /*

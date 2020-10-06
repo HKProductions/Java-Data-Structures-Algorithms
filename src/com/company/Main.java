@@ -28,6 +28,7 @@ public class Main {
         // Sorting Algorithms Testing
         testBubbleSort();
         testSelectionSort();
+        testInsertionSort();
     }
 
     private static void testValidAnagram(){
@@ -200,11 +201,11 @@ public class Main {
         SortingAlgorithm sa = new SortingAlgorithm();
 
         int[] test1 = {1,15,2,3,8,30,81,5,10};
-        int[] test2 = {-1,15,-5,-16,51,-20};
+        int[] test2 = {-1,15,-5,-16,51,-20,-1};
         int[] test3 = {0};
         int[] test4 = {};
         int[] test5 = {1,2,3,8,30,81,5,10};
-        int[] test6 = {-1,15,-5,-16,51,-20};
+        int[] test6 = {-1,15,-5,-16,51,-20,-1};
         int[] test7 = {0};
         int[] test8 = {};
 
@@ -239,7 +240,7 @@ public class Main {
         SortingAlgorithm sa = new SortingAlgorithm();
 
         int[] test1 = {1,15,2,3,8,30,81,5,10};
-        int[] test2 = {-1,15,-5,-51,-16,51,-20};
+        int[] test2 = {-1,15,-5,-51,-16,51,-20,-1};
         int[] test3 = {0};
         int[] test4 = {};
         int[] test5 = {1,2,3,4,5,6,7,8};
@@ -258,6 +259,29 @@ public class Main {
         printArray(test5);
 
         System.out.println();
+    }
+
+    private static void testInsertionSort(){
+        SortingAlgorithm sa = new SortingAlgorithm();
+
+        int[] test1 = {1,15,2,3,8,30,81,5,10,58};
+        int[] test2 = {-1,15,-51,-16,51,-20,-1};
+        int[] test3 = {0};
+        int[] test4 = {};
+        int[] test5 = {1,2,3,4,5,6,7,8};
+
+        test1 = sa.insertionSort(test1);
+        test2 = sa.insertionSort(test2);
+        test3 = sa.insertionSort(test3);
+        test4 = sa.insertionSort(test4);
+        test5 = sa.insertionSort(test5);
+
+        System.out.print("\nInsertion Sort Testing: ");
+        printArray(test1);
+        printArray(test2);
+        printArray(test3);
+        printArray(test4);
+        printArray(test5);
     }
 
     private static void printArray(int[] arr){
