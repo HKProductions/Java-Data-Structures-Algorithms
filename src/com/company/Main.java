@@ -29,6 +29,8 @@ public class Main {
         testBubbleSort();
         testSelectionSort();
         testInsertionSort();
+        testMergeSort();
+        testQuickSort();
     }
 
     private static void testValidAnagram(){
@@ -209,29 +211,19 @@ public class Main {
         int[] test7 = {0};
         int[] test8 = {};
 
-        test1 = sa.bubbleSortV1(test1);
-        test2 = sa.bubbleSortV1(test2);
-        test3 = sa.bubbleSortV1(test3);
-        test4 = sa.bubbleSortV1(test4);
-
-        test5 = sa.bubbleSortV2(test5);
-        test6 = sa.bubbleSortV2(test6);
-        test7 = sa.bubbleSortV2(test7);
-        test8 = sa.bubbleSortV2(test8);
-
         System.out.print("\nBubble Sort Testing: ");
-        printArray(test1);
-        printArray(test2);
-        printArray(test3);
-        printArray(test4);
+        printArray(sa.bubbleSortV1(test1));
+        printArray(sa.bubbleSortV1(test2));
+        printArray(sa.bubbleSortV1(test3));
+        printArray(sa.bubbleSortV1(test4));
 
         System.out.println();
 
         System.out.print("\nBubble Sort Optimization Testing: ");
-        printArray(test5);
-        printArray(test6);
-        printArray(test7);
-        printArray(test8);
+        printArray(sa.bubbleSortV1(test5));
+        printArray(sa.bubbleSortV1(test6));
+        printArray(sa.bubbleSortV1(test7));
+        printArray(sa.bubbleSortV1(test8));
 
         System.out.println();
     }
@@ -245,18 +237,12 @@ public class Main {
         int[] test4 = {};
         int[] test5 = {1,2,3,4,5,6,7,8};
 
-        test1 = sa.selectionSort(test1);
-        test2 = sa.selectionSort(test2);
-        test3 = sa.selectionSort(test3);
-        test4 = sa.selectionSort(test4);
-        test5 = sa.selectionSort(test5);
-
         System.out.print("\nSelection Sort Testing: ");
-        printArray(test1);
-        printArray(test2);
-        printArray(test3);
-        printArray(test4);
-        printArray(test5);
+        printArray(sa.selectionSort(test1));
+        printArray(sa.selectionSort(test2));
+        printArray(sa.selectionSort(test3));
+        printArray(sa.selectionSort(test4));
+        printArray(sa.selectionSort(test5));
 
         System.out.println();
     }
@@ -270,18 +256,52 @@ public class Main {
         int[] test4 = {};
         int[] test5 = {1,2,3,4,5,6,7,8};
 
-        test1 = sa.insertionSort(test1);
-        test2 = sa.insertionSort(test2);
-        test3 = sa.insertionSort(test3);
-        test4 = sa.insertionSort(test4);
-        test5 = sa.insertionSort(test5);
-
         System.out.print("\nInsertion Sort Testing: ");
+        printArray(sa.insertionSort(test1));
+        printArray(sa.insertionSort(test2));
+        printArray(sa.insertionSort(test3));
+        printArray(sa.insertionSort(test4));
+        printArray(sa.insertionSort(test5));
+
+        System.out.println();
+    }
+
+    private static void testMergeSort(){
+        SortingAlgorithm sa = new SortingAlgorithm();
+
+        int[] test1 = {1,15,2,3,8,30,81,5,10,58,-91};
+        int[] test2 = {-1,15,33,-51,-16,51,-20,-1};
+        int[] test3 = {0};
+        int[] test4 = {};
+        int[] test5 = {1,2,3,4,5,6,7,8};
+
+        test1 = sa.mergeSort(test1);
+        test2 = sa.mergeSort(test2);
+        test3 = sa.mergeSort(test3);
+        test4 = sa.mergeSort(test4);
+        test5 = sa.mergeSort(test5);
+
+        System.out.print("\nMerge Sort Testing: ");
         printArray(test1);
         printArray(test2);
         printArray(test3);
         printArray(test4);
         printArray(test5);
+
+        System.out.println();
+    }
+
+    private static void testQuickSort(){
+        SortingAlgorithm sa = new SortingAlgorithm();
+
+        int[] test1 = {15,2,8,30,81,5,10,58,-91};
+        int[] test2 = {-1,15,33,-51,-16,51,-20,-1};
+        int[] test3 = {0};
+        int[] test4 = {};
+        int[] test5 = {1,2,3,4,5,6,7,8};
+
+        System.out.print("\nQuick Sort testing: ");
+        printArray(sa.pivotSort(test1, 0, test1.length));
     }
 
     private static void printArray(int[] arr){

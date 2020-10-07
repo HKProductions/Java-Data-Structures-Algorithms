@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 public class SortingAlgorithm {
 
     /*
@@ -158,4 +160,191 @@ public class SortingAlgorithm {
         //Return the sorted array
         return nums;
     }
+
+    /*
+        O(NlogN) time complexity
+        O(N) space complexity
+        This is my implementation of merge sort using recursion to get the array elements down to one and then
+            sending the array element to a helper function to merge and sort the values into the appropriate locations
+
+         TODO: Make function more generic
+     */
+    public int[] mergeSort(int[] nums){
+        /*
+            Check to see if nums array size is less than or equal to 1
+                If so return nums array
+         */
+        if(nums.length <= 1)
+            return nums;
+
+        // Find the midpoint of the array
+        int mid = nums.length/2;
+
+        // Use the midpoint of the array to simplify the data on the left and right of the midpoint in order to sort the array
+        int[] left = mergeSort(Arrays.copyOfRange(nums, 0, mid));
+        int[] right = mergeSort(Arrays.copyOfRange(nums, mid, nums.length));
+
+        // Call a helper function to do sorting and merging of arrays and return the results of that sorted array
+        return mergeHelper(left, right);
+    }
+
+    /*
+        O(N+M) time and space complexity
+        This function will create a new array that is the size of both arr1 and arr2 that are passed to it and merge
+            them by sorting them from smallest to largest. Do note that both arr1 and arr2 must be sorted already in order
+            for this function to work properly
+
+        TODO: Make function more generic
+     */
+    private int[] mergeHelper(int[] arr1, int[] arr2){
+        /*
+            Check to see if either arr1 or arr2 are empty
+                If one is empty then return the other full array
+             Check to see if both arr1 and arr2 are empty
+                If so return the one of the arrays
+         */
+        if(arr1.length <= 0 && arr2.length <= 0)
+            return arr1;
+        else if(arr1.length <= 0 || arr2.length <= 0){
+            if(arr1.length <= 0)
+                return arr1;
+            else
+                return arr2;
+        }
+
+        /*
+            Declare a new array with the total size being the combined size of arr1 and arr2
+            Declare two variables that point the start indexes of arr1 and arr2
+            Declare a variables to be the index that points to the start of new array created so values can be inserted
+         */
+        int[] mergedArr = new int[arr1.length + arr2.length];
+        int startArr1 = 0;
+        int startArr2 = 0;
+        int mergedIndex = 0;
+
+        /*
+            Use a while loop to loop through both arrays and to stop once it reaches the end of one of the arrays
+                Check to see if arr1 index value is less than arr2 index value
+                    If so insert arr1 value into new array at index
+                    Increase arr1 index
+                Else
+                    Insert arr2 value into new array at index
+                    Increase arr2 index
+
+                Increase new array index
+         */
+        while(startArr1 < arr1.length && startArr2 < arr2.length){
+            if(arr1[startArr1] < arr2[startArr2]) {
+                mergedArr[mergedIndex] = arr1[startArr1];
+                startArr1++;
+            }
+            else {
+                mergedArr[mergedIndex] = arr2[startArr2];
+                startArr2++;
+            }
+
+            mergedIndex++;
+        }
+
+        /*
+            Check to see if arr1 has reached the end of the array
+                Insert each value from arr1 into new array
+                Increase arr1 index
+                Increase new array index
+         */
+        while(startArr1 < arr1.length){
+            mergedArr[mergedIndex] = arr1[startArr1];
+            startArr1++;
+            mergedIndex++;
+        }
+
+        /*
+            Check to see if arr2 has reached the end of the array
+                Insert each value from arr2 into new array
+                Increase arr2 index
+                Increase new array index
+         */
+        while(startArr2 < arr2.length){
+            mergedArr[mergedIndex] = arr2[startArr2];
+            startArr2++;
+            mergedIndex++;
+        }
+
+        // Return the new array
+        return mergedArr;
+    }
+
+    /*
+        *O(NlogN) Time Complexity
+        *O(log N) Space Complexity
+
+        This is my implementation of pivot sort where I used the first element of the array to sort the array in place
+
+        * Note that the time and space complexity can change if the array is already sorted
+        * O(N^2) Time Complexity
+        * O(N) Space Complexity
+        * The reason why a sorted array will cause this issue is because when the array is pivoted it sees that the pivot index is already in the proper
+            location. So if all the values were in the proper location it would be going through all the values through the recursion call at least once
+            and the for loop will be going through the array one more time so it would be going through the array twice. That is why the time complexity
+            will be O(N^2). In regards to the O(N) space complexity since we have to go through the entire array from start to end if it's sorted we would
+            be making N number of recursion to this function which would take up memory
+
+        TODO: Make this function more generic to allow different array types to interact with function and for wider functionality
+     */
+    public int[] pivotSort(int[] nums, int start, int end){
+        /*
+            Iterate through the nums array until left and right overlap each other
+                Get the pivot point where the start index value should be placed in the array
+                Recursively call the pivotSort function with the array from the start to the one index before the midpoint
+                Recursively call the pivotSort function with the array one step after the midpoint to the end
+         */
+        if(start < end){
+            int pivotPoint = pivotHelper(nums, start, end);
+
+            pivotSort(nums, start, pivotPoint-1);
+            pivotSort(nums, pivotPoint+1, end);
+        }
+
+        // Return nums array once start and end overlap
+        return nums;
+    }
+
+    /*
+        O(N) Time complexity
+        O(1) Space complexity
+        This function is being used to pivot the array on the first value and sort it according and returning the index at where the first value belongs at
+
+        TODO: Make this function more generic for wider functionality
+     */
+    private int pivotHelper(int[] arr, int min, int max){
+        /*
+            Create two variables
+                One variable will be used as the pivot variable using the value in the arr at min index
+                Second variable will be used to return the index to where the pivot value should reside
+         */
+        int pivotVal = arr[min];
+        int pivIndex = min;
+
+        /*
+            Since we don't want to start from the pivot variable we move one step up and go to the end of the array
+                We check to see if the value at the specific index in the array is less than the pivot variable
+                    If it is increase the pivot index and swap the values at the pivot index with the value at the array index
+         */
+        for(int i = min+1; i < max; i++){
+            if(arr[i] < pivotVal){
+                pivIndex++;
+                int temp = arr[i];
+                arr[i] = arr[pivIndex];
+                arr[pivIndex] = temp;
+            }
+        }
+
+        // Now we finally swap the pivot value with the last minimum index value
+        arr[min] = arr[pivIndex];
+        arr[pivIndex] = pivotVal;
+
+        // Return the index to where the pivot variable was placed
+        return pivIndex;
+    }
+
 }
