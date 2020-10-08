@@ -1,6 +1,8 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class SortingAlgorithm {
 
@@ -345,6 +347,128 @@ public class SortingAlgorithm {
 
         // Return the index to where the pivot variable was placed
         return pivIndex;
+    }
+
+    /*
+        O(K * N) Time Complexity
+        O(N + K) Space Complexity
+
+        This is my implementation of radix sort using an int array. This function will only sort properly if all inputs in
+            the array are positive
+
+        Note:
+            This is in regards to explain more in detail about the time and space complexity. The reason why the time complexity
+                is O(K * N) is because K is based on the largest digit in the nums array and we have to loop through the nums array
+                K amount of times in order to sort it and the N is based on the fact that we have to loop through the nums array
+                N times in order to update each cell in the array.
+     */
+    public int[] radixSort(int[] nums){
+        /*
+            Check to see if nums is less than or equal to 1
+                If so return nums array
+         */
+        if(nums.length <= 1)
+            return nums;
+
+        // Determine how many digits are in the the largest value in the nums array
+        int maxDigitCount = maxDigitsHelper(nums);
+
+        /*
+            Loop through the nums array based based on the largest value digit count
+                Create a 2D array with 10 empty rows
+
+                Loop through the nums array
+                    Check to see what the value is at the current digit value
+                    Place value in the correct row in the 2D array
+
+                Have a value to indicate which index to update in the nums array
+
+                Loop through each row of the of the 2D array
+                    Loop through each column of the 2D array
+                        Insert the value into the nums array
+                        Increase index value for nums array
+
+         */
+        for(int i = 0; i < maxDigitCount; i++){
+            ArrayList<ArrayList<Integer>> buckets = new ArrayList<>();
+
+            for(int j = 0; j < 10; j++){
+                ArrayList<Integer> container = new ArrayList<>();
+                buckets.add(container);
+            }
+
+            for(int val : nums){
+                int index = getDigitHelper(val, i);
+                buckets.get(index).add(val);
+            }
+
+            int numsIndex = 0;
+            for(int j = 0; j < buckets.size(); j++){
+                for(int val : buckets.get(j)){
+                    nums[numsIndex] = val;
+                    numsIndex++;
+                }
+            }
+        }
+
+        // Return sorted array
+        return nums;
+    }
+
+    private int getDigitHelper(int value, int index){
+        // Divide the value by 10 by index-1 times
+        for(int i = 0; i < index; i++){
+            value /= 10;
+        }
+
+        // Do a mod to the altered value after the for loop to get the remainder value at the index and return that value
+        return value % 10;
+    }
+
+    private int getDigitCountHelper(int value){
+        /*
+            Check to see if value is less than 0
+                If so convert the value to a positive number using absolute value
+         */
+        if(value < 0)
+            value = Math.abs(value);
+
+        /*
+            Check to see if value is equal to 0
+                If so return 1
+         */
+        if(value == 0)
+            return 1;
+
+        // Do a log base 10 to call to determine how many digits are in the value and return count
+        return (int)Math.log10(value) + 1;
+    }
+
+    private int maxDigitsHelper(int[] nums){
+        /*
+            Check to see if nums array is less than 1
+                If so return 0
+         */
+        if(nums.length < 1)
+            return 0;
+
+        // Have a value set to 0 to keep track of the max number of digits
+        int maxDigitCount = 0;
+
+        /*
+            Loop through nums array
+                Send value at specific index in nums to getDigitCountHelper function
+                Check to see if value returned from getDigitCountHelper function is greater than max digits count
+                    If so update max digit count value to getDigitCountHelper value
+         */
+        for(int value : nums){
+            int temp = getDigitCountHelper(value);
+            if(maxDigitCount < temp)
+                maxDigitCount = temp;
+        }
+
+        // Return max digit count value
+        return maxDigitCount;
     }
 
 }

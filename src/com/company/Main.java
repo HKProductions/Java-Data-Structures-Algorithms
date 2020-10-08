@@ -31,6 +31,7 @@ public class Main {
         testInsertionSort();
         testMergeSort();
         testQuickSort();
+        testRadixSort();
     }
 
     private static void testValidAnagram(){
@@ -302,6 +303,25 @@ public class Main {
 
         System.out.print("\nQuick Sort testing: ");
         printArray(sa.pivotSort(test1, 0, test1.length));
+        printArray(sa.pivotSort(test2, 0, test2.length));
+        printArray(sa.pivotSort(test3, 0, test3.length));
+        printArray(sa.pivotSort(test4, 0, test4.length));
+        printArray(sa.pivotSort(test5, 0, test5.length));
+
+        System.out.println();
+    }
+
+    private static void testRadixSort(){
+        SortingAlgorithm sa = new SortingAlgorithm();
+
+        int[] test1 = {1, 4, 12412, 2, 18, 3023, 124, 123, 81, 9};
+        int[] test2 = {100};
+        int[] test3 = {};
+
+        System.out.print("\nRadix Sort testing: ");
+        printArray(sa.radixSort(test1));
+        printArray(sa.radixSort(test2));
+        printArray(sa.radixSort(test3));
     }
 
     private static void printArray(int[] arr){
