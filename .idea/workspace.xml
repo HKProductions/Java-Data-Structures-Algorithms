@@ -17,53 +17,44 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="375">
+              <caret line="365" column="42" lean-forward="true" selection-start-line="365" selection-start-column="42" selection-end-line="365" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#testValidAnagram#0;class#Main#0" />
+                <element signature="method#testCountUniqueValues#0;class#Main#0" />
+                <element signature="method#testAveragePair#0;class#Main#0" />
+                <element signature="method#testIsSubsequence#0;class#Main#0" />
+                <element signature="method#testPowerRec#0;class#Main#0" />
+                <element signature="method#testFactorial#0;class#Main#0" />
+                <element signature="method#testProductOfArrayList#0;class#Main#0" />
+                <element signature="method#testRecursiveRange#0;class#Main#0" />
+                <element signature="method#testFib#0;class#Main#0" />
+                <element signature="method#testLinearSearch#0;class#Main#0" />
+                <element signature="method#testBinarySearch#0;class#Main#0" />
+                <element signature="method#testNaiveStringSearch#0;class#Main#0" />
+                <element signature="method#testBubbleSort#0;class#Main#0" />
+                <element signature="method#testSelectionSort#0;class#Main#0" />
+                <element signature="method#testInsertionSort#0;class#Main#0" />
+                <element signature="method#testMergeSort#0;class#Main#0" />
+                <element signature="method#testQuickSort#0;class#Main#0" />
+                <element signature="method#printArray#0;class#Main#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/SearchAlgorithm.java">
+        <entry file="file://$PROJECT_DIR$/src/com/company/SinglyLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-476">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/SortingAlgorithm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-514">
-              <caret line="426" lean-forward="true" selection-start-line="426" selection-end-line="426" />
+            <state relative-caret-position="273">
+              <caret line="280" column="10" selection-start-line="280" selection-start-column="10" selection-end-line="280" selection-end-column="10" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#141#142#0" expanded="true" />
+                <element signature="e#181#182#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="180" column="48" lean-forward="true" selection-start-line="180" selection-start-column="48" selection-end-line="180" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/recursion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -81,10 +72,12 @@
     <findStrings>
       <find>public</find>
       <find>TO-DO</find>
+      <find>= insert</find>
     </findStrings>
     <replaceStrings>
       <replace>private</replace>
       <replace>TODO</replace>
+      <replace>= newNode</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -96,8 +89,9 @@
         <option value="$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java" />
         <option value="$PROJECT_DIR$/src/com/company/recursion.java" />
         <option value="$PROJECT_DIR$/src/com/company/SearchAlgorithm.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/SortingAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/SinglyLinkedList.java" />
       </list>
     </option>
   </component>
@@ -186,11 +180,12 @@
       <updated>1601594428817</updated>
       <workItem from="1601594431739" duration="27179000" />
       <workItem from="1601963930385" duration="27225000" />
+      <workItem from="1602219037746" duration="10071000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54404000" />
+    <option name="totallyTimeSpent" value="64475000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -205,7 +200,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18791947" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09328859" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -214,7 +209,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -239,19 +234,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/SortingAlgorithm.java</url>
-          <line>302</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3043">
+          <caret line="180" column="48" selection-start-line="180" selection-start-column="48" selection-end-line="180" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/recursion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -261,37 +254,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/SearchAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-476">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="-1088">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/SortingAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="180" column="48" lean-forward="true" selection-start-line="180" selection-start-column="48" selection-end-line="180" selection-end-column="48" />
+        <state relative-caret-position="133">
+          <caret line="302" selection-start-line="302" selection-end-line="302" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/SortingAlgorithm.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/SinglyLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <caret line="426" lean-forward="true" selection-start-line="426" selection-end-line="426" />
+        <state relative-caret-position="273">
+          <caret line="280" column="10" selection-start-line="280" selection-start-column="10" selection-end-line="280" selection-end-column="10" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#141#142#0" expanded="true" />
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="375">
+          <caret line="365" column="42" lean-forward="true" selection-start-line="365" selection-start-column="42" selection-end-line="365" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#testValidAnagram#0;class#Main#0" />
+            <element signature="method#testCountUniqueValues#0;class#Main#0" />
+            <element signature="method#testAveragePair#0;class#Main#0" />
+            <element signature="method#testIsSubsequence#0;class#Main#0" />
+            <element signature="method#testPowerRec#0;class#Main#0" />
+            <element signature="method#testFactorial#0;class#Main#0" />
+            <element signature="method#testProductOfArrayList#0;class#Main#0" />
+            <element signature="method#testRecursiveRange#0;class#Main#0" />
+            <element signature="method#testFib#0;class#Main#0" />
+            <element signature="method#testLinearSearch#0;class#Main#0" />
+            <element signature="method#testBinarySearch#0;class#Main#0" />
+            <element signature="method#testNaiveStringSearch#0;class#Main#0" />
+            <element signature="method#testBubbleSort#0;class#Main#0" />
+            <element signature="method#testSelectionSort#0;class#Main#0" />
+            <element signature="method#testInsertionSort#0;class#Main#0" />
+            <element signature="method#testMergeSort#0;class#Main#0" />
+            <element signature="method#testQuickSort#0;class#Main#0" />
+            <element signature="method#printArray#0;class#Main#0" />
           </folding>
         </state>
       </provider>

@@ -6,8 +6,10 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-	    // Common Problem Solving Methods Testing
-        // Focus on counting frequency, two pointers, and sliding window
+	    /*
+	        Common Problem Solving Methods Testing
+	            Focus on counting frequency, two pointers, and sliding window
+	     */
         testValidAnagram();
         testCountUniqueValues();
         testAveragePair();
@@ -32,6 +34,10 @@ public class Main {
         testMergeSort();
         testQuickSort();
         testRadixSort();
+
+        // Data Structure: Linked List Testing
+        testSinglyLinkedList();
+
     }
 
     private static void testValidAnagram(){
@@ -322,6 +328,49 @@ public class Main {
         printArray(sa.radixSort(test1));
         printArray(sa.radixSort(test2));
         printArray(sa.radixSort(test3));
+
+        System.out.println();
+    }
+
+    private static void testSinglyLinkedList(){
+        SinglyLinkedList sll = new SinglyLinkedList();
+
+        System.out.println("\nLinked List Testing:");
+        /*System.out.println("Testing out remove functionality for empty linked list");
+        System.out.println("Removed value: " + sll.remove() + "\n");*/
+
+        System.out.println("Testing out adding in value into empty linked list using an index");
+        sll.add(0, 19);
+        printLinkedList(sll.returnList());
+
+        System.out.println("Testing out remove function");
+        System.out.println("Removed value: " + sll.remove() + "\n");
+
+        System.out.println("Testing out adding in values into populated linked list using regular add function");
+        sll.add(15);
+        sll.add(21);
+        sll.add(1);
+        printLinkedList(sll.returnList());
+
+        System.out.println("Testing out adding in values into populated linked list using add at index function");
+        sll.add(0, 5);
+        sll.add(2, 62);
+        sll.add(4, 92);
+        printLinkedList(sll.returnList());
+
+        /*System.out.println("Testing out adding in values into populated linked list using add at index function where the index is larger than list");
+        sll.add(9, 72);*/
+
+        System.out.println("Testing out adding value at the start of the linked list");
+        sll.addFirst(200);
+        printLinkedList(sll.returnList());
+
+        System.out.println("Testing out adding value at the end of the linked list");
+        sll.addLast(1996);
+        printLinkedList(sll.returnList());
+
+        System.out.println("Testing out remove function");
+        System.out.println("Removed value: " + sll.remove());
     }
 
     private static void printArray(int[] arr){
@@ -335,5 +384,14 @@ public class Main {
         for(int i : arr){
             System.out.print(i + " ");
         }
+    }
+
+    private static void printLinkedList(SinglyLinkedList.Node list){
+        while(list != null){
+            System.out.println(list.val);
+            list = list.next;
+        }
+
+        System.out.println();
     }
 }
