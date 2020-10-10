@@ -352,10 +352,14 @@ public class Main {
         sll.add(1);
         printLinkedList(sll.returnList());
 
+        System.out.println("Testing out remove at index function");
+        sll.remove(0);
+        printLinkedList(sll.returnList());
+
         System.out.println("Testing out adding in values into populated linked list using add at index function");
         sll.add(0, 5);
         sll.add(2, 62);
-        sll.add(4, 92);
+        sll.add(3, 92);
         printLinkedList(sll.returnList());
 
         /*System.out.println("Testing out adding in values into populated linked list using add at index function where the index is larger than list");
@@ -369,8 +373,31 @@ public class Main {
         sll.addLast(1996);
         printLinkedList(sll.returnList());
 
+        System.out.println("Testing out get functionality of the linked list");
+        System.out.println(sll.getFirst());
+        System.out.println(sll.getLast());
+        System.out.println(sll.get(3) + "\n");
+
+        System.out.println("Testing out set functionality of the linked list");
+        sll.set(0, 2014);
+        sll.set(4, 600);
+        sll.set(6, 3);
+        printLinkedList(sll.returnList());
+
+        System.out.println("Testing out reverse functionality for a linked list");
+        sll.reverse();
+        printLinkedList(sll.returnList());
+
         System.out.println("Testing out remove function");
-        System.out.println("Removed value: " + sll.remove());
+        sll.remove();
+        printLinkedList(sll.returnList());
+
+        System.out.println("Testing out remove at index function");
+        sll.remove(3);
+        sll.removeLast();
+        printLinkedList(sll.returnList());
+        sll.removeFirst();
+        printLinkedList(sll.returnList());
     }
 
     private static void printArray(int[] arr){

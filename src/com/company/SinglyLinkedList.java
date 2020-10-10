@@ -130,13 +130,13 @@ public class SinglyLinkedList {
         Node newNode = new Node();
         newNode.val = value;
 
-        // Create a temp node that points to the head of the current linked list in order for us to traverse the linked list
+        /*
+            Create a temp node that points to the head of the current linked list in order for us to traverse the linked list
+            Create a prev node that points to null
+            Create a variable to count the number of indexes passed starting from 0
+         */
         Node temp = head;
-
-        // Create a prev node that points to null
         Node prev = null;
-
-        // Create a variable to count the number of indexes passed starting from 0
         int iCount = 0;
 
         /*
@@ -151,7 +151,7 @@ public class SinglyLinkedList {
         */
         while(temp != null){
             if(iCount == index){
-                newNode.next = prev.next;
+                newNode.next = temp;
                 prev.next = newNode;
                 length++;
                 break;
@@ -267,17 +267,295 @@ public class SinglyLinkedList {
         return hValue;
     }
 
-    public void remove(int index){
+    /*
+        O(N) time complexity
+        O(1) space complexity
+
+        This is my implementation of removing a value anywhere in the linked list
+
+        This function takes O(N) time to complete because if we have to remove the last element in the linked list it
+            will have to traverse through the entire linked list till it gets to the end of the list and from there it removes
+            the reference to the current node from the previous node. The reason this take O(1) space is because we aren't
+            creating any new object but manipulating the existing nodes in the linked list.
+     */
+    public int remove(int index){
         /*
             Check to see if index is equal to zero
                 Call and return result from remove function
          */
+        if(index == 0)
+            return remove();
 
         /*
             Check to see if index is less than 0 or greater than the length of linked list minus 1
                 If so throw an error for index not existing in linked list
          */
+        if(index < 0 || index > length - 1)
+            throw new NullPointerException("Index is not part of linked list");
 
-        //
+        // Have a temp value that uses the head node to traverse the linked list
+        Node temp = head;
+
+        // Have a prev value that points to the prev node but is current set to null
+        Node prev = null;
+
+        /*
+            Have a count variable to count number of indexes passed
+            Have a value to store the value to be returned
+         */
+        int iCount = 0;
+        int resValue = 0;
+
+        /*
+            Loop through the linked list until temp value is equal to null
+                Check to see if index count is equal to index value
+                    Have return value store the current value in the temp val field
+                    Have prev node next value point to the temp.next value
+                    Decrease the length value
+                    Check to see if index is equal to length - 1
+                        If so point tail to prev
+                    Break out of while loop
+                Have the prev node point to current temp value
+                Have temp point to the next value in the linked list
+                Increase the index count
+         */
+        while(temp != null){
+            if(iCount == index){
+                resValue = temp.val;
+                prev.next = temp.next;
+
+                if(index == length-1)
+                    tail = prev;
+                length--;
+                break;
+            }
+
+            prev = temp;
+            temp = temp.next;
+            iCount++;
+        }
+
+        // Return the return value
+        return resValue;
+    }
+
+    /*
+        O(N) time complexity
+        O(1) space complexity
+
+        This is my implementation of removing the last value from the linked list by utilizing one of the remove functions
+            created above
+     */
+    public int pop(){
+        return remove(length-1);
+    }
+
+    /*
+        O(1) time complexity
+        O(1) Space complexity
+
+        This is my implementation of removing the first value from the linked list by utilizing one of our remove functions
+            created above
+     */
+    public int removeFirst(){
+        return remove();
+    }
+
+    /*
+        O(N) time complexity
+        O(1) space complexity
+
+        This is my implementation of removing the last value from the linked list by utilizing one of the remove functions
+            created above
+     */
+    public int removeLast(){
+        return pop();
+    }
+
+    /*
+        O(N) time complexity
+        O(1) space complexity
+
+        This is my implementation of the get method for linked list
+
+        The reason why this function's time complexity is O(N) is because if we have to go to the middle of the linked list
+            we have to traverse through the list N number of times until we get to the middle of the list. If we just had to see
+            what the value was at the beginning or end of the link list the time complexity would be O(1). The reason why the
+            space complexity is O(1) is because we aren't manipulating the linked list or creating any new objects that would
+            take up memory. Due to that reason our memory is constant.
+     */
+    public int get(int index){
+        /*
+            Check to see if index is equal to 0
+                If so return the head node value
+         */
+        if(index == 0)
+            return head.val;
+
+        /*
+            Check to see if index is equal to length of linked list minus 1
+                If so return the tail node value
+         */
+        if(index == length-1)
+            return tail.val;
+
+        /*
+            Check to see if index is valid by checked to see if index is greater than 0 and less than or equal to length of linked list minus 1
+                If not throw a null pointer error
+         */
+        if(index < 0 || index > length-1)
+            throw new NullPointerException("Index does not exist in linked list");
+
+        /*
+            Create a temp node value to store the head node to be used for traversal
+            Create a index count value set to 0
+         */
+        Node temp = head;
+        int iCount = 0;
+
+        /*
+            Do a while loop to traverse through the linked list until the next node is null
+                Check to index count is equal to index
+                    If so return the value at the index using the temp
+                Set temp node to the next node in temp
+                Increase index count
+         */
+        while(temp != null){
+            if(iCount == index)
+                return temp.val;
+            temp = temp.next;
+            iCount++;
+        }
+
+        // Default case return 0
+        return 0;
+    }
+
+    /*
+        O(1) time complexity
+        O(1) space complexity
+
+        This is my implementation of the get first function in a linked list. This is utilizing the get function by getting the
+            first element in the linked list. Since we are getting the first element it makes the time complexity O(1) since
+            we have a direct reference to that node at all times with the head node.
+     */
+    public int getFirst(){
+        return get(0);
+    }
+
+    /*
+        O(1) time complexity
+        O(1) space complexity
+
+        This is my implementation of the get last function in a linked list. This is utilizing the get function by getting the
+            last element in the linked list. Since we are getting the last element it makes the time complexity O(1) since
+            we have a direct reference to that node at all times with the tail node.
+     */
+    public int getLast(){
+        return get(length-1);
+    }
+
+    /*
+        O(N) time complexity
+        O(1) space complexity
+
+        This is my implementation of the set function for a linked list.
+
+        The reason why this function's time complexity is O(N) is if the user wanted to update the index at length minus 2
+            the program would have to traverse through the entire linked list N number of times. If we only had to update the first
+            and last value of the linked list it would take O(1) time in that situation because we have a direct reference to those
+            two nodes. The reasoning behind why the space complexity is O(1) is because we aren't adding a new node to the linked list
+            or creating any new objects that would take up extra memory. Due to that we have constant space
+     */
+    public void set(int index, int val){
+        /*
+            Check to see if the index is equal to 0
+                If it is set the head node value to the new value
+                Exit out of the function
+         */
+        if(index == 0){
+            this.head.val = val;
+            return;
+        }
+
+        /*
+            Check to see if the index is equal to the length of the linked list minus 1
+                If it is set the tail node value to the new value
+                Exit out of the function
+         */
+        if(index == length-1){
+            this.tail.val = val;
+            return;
+        }
+
+        /*
+            Check if the index is greater than or equal to 0 but less than or equal to the length of linked list minus 1
+                If it is not throw a null pointer exception error
+         */
+        if(index < 0 || index > length-1)
+            throw new NullPointerException("Index is out of scope for the linked list");
+
+        /*
+            Create a temp node that refers to the head node to traverse through the linked list
+            Create a variable to keep count of indexes pass and initialize it to 0
+         */
+        Node temp = head;
+        int iCount = 0;
+
+        /*
+            Loop through the linked list with a while loop checking to see if the temp node is not equal to null
+                If the index count is equal to the index being searched for
+                    Update the temp value node with the new value
+                    Exit out of the loop with a break;
+                Set temp node to the next temp node
+                Increase the index count
+         */
+        while(temp != null){
+            if(iCount == index){
+                temp.val = val;
+                break;
+            }
+            temp = temp.next;
+            iCount++;
+        }
+    }
+
+    /*
+        O(N) time complexity
+        O(1) space complexity
+
+        This is my implementation of reversing a linked list
+
+        The reason why this function's time complexity is O(N) is because we have to traverse through the entire linked list
+            reversing the node next pointers. The reason why the space complexity is O(1) is because we aren't adding any new objects
+            or adding any new values to the linked list or using up memory. Due to that reason we are just using the current
+            nodes already created to reverse it in constant space time.
+     */
+    public void reverse(){
+        // This will have to utilize two pointer one for next and one for curr
+        Node curr = head;
+        Node next = curr.next;
+
+        // Set the curr val to null and set the tail to the curr node
+        curr.next = null;
+        tail = curr;
+
+        /*
+            Loop through the rest of the linked list with a while loop checking to see if next node is null
+                Create a temp node that points to the current next node
+                Change next node to curr node
+                Change curr node to curr next node
+                Check to see if temp node is null
+                    If so set the head node to the next node
+                Change next node to temp node
+         */
+        while(next != null){
+            Node temp = next.next;
+            next.next = curr;
+            curr = next;
+            if(temp == null)
+                head = next;
+            next = temp;
+        }
     }
 }
