@@ -38,6 +38,15 @@ public class Main {
         // Data Structure: Linked List Testing
         testSinglyLinkedList();
 
+        // Data Structure: Stack Testing
+        testStack();
+
+        // Data Structure: Queue Testing
+        testQueue();
+
+        // Data Structure: Binary Search Tree
+        testBinarySearchTree();
+
     }
 
     private static void testValidAnagram(){
@@ -398,6 +407,73 @@ public class Main {
         printLinkedList(sll.returnList());
         sll.removeFirst();
         printLinkedList(sll.returnList());
+    }
+
+    private static void testStack(){
+        Stack s = new Stack();
+        s.push(10);
+        s.push(51);
+        s.push(71);
+        s.push(2013);
+
+        System.out.println("Testing out pop and peek stack functionality");
+        System.out.println(s.peek());
+        System.out.println(s.pop());
+        System.out.println(s.peek());
+        System.out.println(s.pop());
+        System.out.println(s.peek());
+        System.out.println(s.pop());
+        s.push(1241);
+        System.out.println(s.peek());
+        System.out.println(s.pop());
+        System.out.println(s.peek());
+        System.out.println(s.pop());
+
+        /*System.out.println("Testing out error testing of stacks");
+        System.out.println(s.peek());
+        System.out.println(s.pop());*/
+    }
+
+    private static void testQueue(){
+        Queue q = new Queue();
+        q.push(10);
+        q.push(15);
+        q.push(500);
+        q.push(1000);
+
+        System.out.println("\nTesting out peek and pop functionality of Queues");
+        System.out.println(q.peek());
+        System.out.println(q.pop());
+        System.out.println(q.peek());
+        System.out.println(q.pop());
+        System.out.println(q.peek());
+        System.out.println(q.pop());
+        q.push(40000);
+        System.out.println(q.peek());
+        System.out.println(q.pop());
+        System.out.println(q.peek());
+        System.out.println(q.pop());
+
+        /*System.out.println("Testing out error handling of queues");
+        System.out.println(q.peek());
+        System.out.println(q.pop());*/
+    }
+
+    private static void testBinarySearchTree(){
+        BinarySearchTree bst = new BinarySearchTree();
+        bst.insert(10);
+        bst.insert(1);
+        bst.insert(15);
+        bst.insert(0);
+        bst.insert(14);
+        bst.insert(10);
+
+        System.out.println("\nTesting out insert and find functionality for binary search tree");
+        System.out.println(bst.find(10));
+        System.out.println(bst.find(11));
+        System.out.println(bst.find(15));
+        System.out.println(bst.find(60));
+        System.out.println(bst.find(1));
     }
 
     private static void printArray(int[] arr){
