@@ -17,10 +17,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="475" column="40" selection-start-line="475" selection-start-column="40" selection-end-line="475" selection-end-column="40" />
+            <state relative-caret-position="543">
+              <caret line="516" column="5" lean-forward="true" selection-start-line="516" selection-start-column="5" selection-end-line="516" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#main#0;class#Main#0" />
                 <element signature="method#testValidAnagram#0;class#Main#0" />
                 <element signature="method#testCountUniqueValues#0;class#Main#0" />
                 <element signature="method#testAveragePair#0;class#Main#0" />
@@ -42,8 +43,28 @@
                 <element signature="method#testSinglyLinkedList#0;class#Main#0" />
                 <element signature="method#testStack#0;class#Main#0" />
                 <element signature="method#testQueue#0;class#Main#0" />
+                <element signature="method#testBinarySearchTree#0;class#Main#0" />
+                <element signature="method#testBinaryHeap#0;class#Main#0" />
                 <element signature="method#printArray#0;class#Main#0" />
                 <element signature="method#printLinkedList#0;class#Main#0" />
+                <element signature="method#printArrayList#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/BinaryHeap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
+              <folding>
+                <element signature="method#BinaryHeap#0;class#BinaryHeap#0" />
+                <element signature="method#insert#0;class#BinaryHeap#0" />
+                <element signature="method#insertMin#0;class#BinaryHeap#0" />
+                <element signature="method#insertMax#0;class#BinaryHeap#0" />
+                <element signature="method#extractMin#0;class#BinaryHeap#0" />
+                <element signature="method#extractMax#0;class#BinaryHeap#0" />
               </folding>
             </state>
           </provider>
@@ -83,14 +104,16 @@
         <option value="$PROJECT_DIR$/src/com/company/SinglyLinkedList.java" />
         <option value="$PROJECT_DIR$/src/com/company/Queue.java" />
         <option value="$PROJECT_DIR$/src/com/company/Stack.java" />
+        <option value="$PROJECT_DIR$/src/com/company/TreeTraversalMethods.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/BinaryHeap.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
-    <option name="width" value="979" />
+    <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -99,7 +122,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -123,6 +145,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -175,12 +198,13 @@
       <workItem from="1601963930385" duration="27225000" />
       <workItem from="1602219037746" duration="22531000" />
       <workItem from="1602820994004" duration="3995000" />
-      <workItem from="1603157737576" duration="6962000" />
+      <workItem from="1603157737576" duration="7056000" />
+      <workItem from="1604890829287" duration="10668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87892000" />
+    <option name="totallyTimeSpent" value="98654000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -195,7 +219,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20872483" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21140939" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -204,8 +228,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -233,10 +257,22 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>471</line>
+          <url>file://$PROJECT_DIR$/src/com/company/BinaryHeap.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/BinaryHeap.java</url>
+          <line>119</line>
           <properties />
           <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/BinaryHeap.java</url>
+          <line>127</line>
+          <properties />
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -327,25 +363,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TreeTraversalMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="108" selection-start-line="97" selection-start-column="108" selection-end-line="97" selection-end-column="108" />
+        <state relative-caret-position="1377">
+          <caret line="112" column="53" lean-forward="true" selection-start-line="112" selection-start-column="53" selection-end-line="112" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/BinaryHeap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="60" column="27" selection-start-line="60" selection-start-column="27" selection-end-line="60" selection-end-column="27" />
           <folding>
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-            <element signature="e#456#457#0" expanded="true" />
+            <element signature="method#BinaryHeap#0;class#BinaryHeap#0" />
+            <element signature="method#insert#0;class#BinaryHeap#0" />
+            <element signature="method#insertMin#0;class#BinaryHeap#0" />
+            <element signature="method#insertMax#0;class#BinaryHeap#0" />
+            <element signature="method#extractMin#0;class#BinaryHeap#0" />
+            <element signature="method#extractMax#0;class#BinaryHeap#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="475" column="40" selection-start-line="475" selection-start-column="40" selection-end-line="475" selection-end-column="40" />
+        <state relative-caret-position="543">
+          <caret line="516" column="5" lean-forward="true" selection-start-line="516" selection-start-column="5" selection-end-line="516" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#main#0;class#Main#0" />
             <element signature="method#testValidAnagram#0;class#Main#0" />
             <element signature="method#testCountUniqueValues#0;class#Main#0" />
             <element signature="method#testAveragePair#0;class#Main#0" />
@@ -367,8 +420,11 @@
             <element signature="method#testSinglyLinkedList#0;class#Main#0" />
             <element signature="method#testStack#0;class#Main#0" />
             <element signature="method#testQueue#0;class#Main#0" />
+            <element signature="method#testBinarySearchTree#0;class#Main#0" />
+            <element signature="method#testBinaryHeap#0;class#Main#0" />
             <element signature="method#printArray#0;class#Main#0" />
             <element signature="method#printLinkedList#0;class#Main#0" />
+            <element signature="method#printArrayList#0;class#Main#0" />
           </folding>
         </state>
       </provider>

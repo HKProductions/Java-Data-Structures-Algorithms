@@ -47,6 +47,8 @@ public class Main {
         // Data Structure: Binary Search Tree
         testBinarySearchTree();
 
+        // Data Structure: Binary Heap
+        testBinaryHeap();
     }
 
     private static void testValidAnagram(){
@@ -476,6 +478,44 @@ public class Main {
         System.out.println(bst.find(1));
     }
 
+    private static void testBinaryHeap(){
+        BinaryHeap bh = new BinaryHeap();
+        bh.insert(15);
+        bh.insert(50);
+        bh.insert(3);
+        bh.insert(10);
+        bh.insert(30);
+        bh.insert(0);
+        bh.insert(5);
+        bh.insert(500);
+
+        System.out.println("\nBinary Heap Testing");
+        printArrayList(bh.returnMin());
+        printArrayList(bh.returnMax());
+
+        System.out.println("\n\nMin Value: " + bh.extractMin());
+        System.out.println("Max Value: " + bh.extractMax());
+        printArrayList(bh.returnMin());
+        printArrayList(bh.returnMax());
+        System.out.println("\n\nMin Value: " + bh.extractMin());
+        System.out.println("Max Value: " + bh.extractMax());
+        printArrayList(bh.returnMin());
+        printArrayList(bh.returnMax());
+        System.out.println("\n\nMin Value: " + bh.extractMin());
+        System.out.println("Max Value: " + bh.extractMax());
+        printArrayList(bh.returnMin());
+        printArrayList(bh.returnMax());
+        System.out.println("\n\nMin Value: " + bh.extractMin());
+        System.out.println("Max Value: " + bh.extractMax());
+        printArrayList(bh.returnMin());
+        printArrayList(bh.returnMax());
+        System.out.println("\n\nMin Value: " + bh.extractMin());
+        System.out.println("Max Value: " + bh.extractMax());
+        printArrayList(bh.returnMin());
+        printArrayList(bh.returnMax());
+
+    }
+
     private static void printArray(int[] arr){
         System.out.println();
 
@@ -496,5 +536,18 @@ public class Main {
         }
 
         System.out.println();
+    }
+
+    private static void printArrayList(ArrayList<Integer> arr){
+        System.out.println("");
+
+        if(arr.size() <= 0){
+            System.out.println("This is an empty array");
+            return;
+        }
+
+        for(int i : arr){
+            System.out.print(i + " ");
+        }
     }
 }
