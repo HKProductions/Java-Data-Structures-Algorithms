@@ -49,6 +49,9 @@ public class Main {
 
         // Data Structure: Binary Heap
         testBinaryHeap();
+
+        // Data Structure: Priority Queue
+        testPriorityQueue();
     }
 
     private static void testValidAnagram(){
@@ -493,13 +496,47 @@ public class Main {
         printArrayList(bh.returnMin());
         printArrayList(bh.returnMax());
 
-        for(int i = 0; i < 7; i++) {
+        for(int i = 0; i < 8; i++) {
             System.out.println("\n\nMin Value: " + bh.extractMin());
             System.out.println("Max Value: " + bh.extractMax());
             printArrayList(bh.returnMin());
             printArrayList(bh.returnMax());
         }
 
+        System.out.println();
+    }
+
+    private static void testPriorityQueue(){
+        PriorityQueue pq = new PriorityQueue();
+        pq.enqueue(10, 2);
+        pq.enqueue(19, 1);
+        pq.enqueue(15, 6);
+        pq.enqueue(50, 4);
+        pq.enqueue(3, 1);
+        pq.enqueue(10, 2);
+        pq.enqueue(30, 5);
+        pq.enqueue(0, 4);
+        pq.enqueue(5, 7);
+        pq.enqueue(500, 3);
+
+        System.out.println("\nPriority Queue Testing");
+        printNodeArrayList(pq.minQueue);
+        printNodeArrayList(pq.maxQueue);
+
+        for(int i = 0; i < 10; i++){
+            PriorityQueue.Node minN = pq.minDequeue();
+            PriorityQueue.Node maxN = pq.maxDequeue();
+
+            if(minN != null && maxN != null) {
+                System.out.println("\n\nMin Value: " + minN.val + "\tMin Priority: " + minN.priorityLevel);
+                System.out.println("Max Value: " + maxN.val + "\tMax Priority: " + maxN.priorityLevel);
+            }
+
+            printNodeArrayList(pq.minQueue);
+            printNodeArrayList(pq.maxQueue);
+        }
+
+        System.out.println();
     }
 
     private static void printArray(int[] arr){
@@ -534,6 +571,21 @@ public class Main {
 
         for(int i : arr){
             System.out.print(i + " ");
+        }
+    }
+
+    private static void printNodeArrayList(ArrayList<PriorityQueue.Node> arr){
+        System.out.println();
+
+        if(arr.size() <= 0){
+            System.out.println("This is an empty array");
+            return;
+        }
+
+        int i = 0;
+        for(PriorityQueue.Node nVal : arr){
+            System.out.println("Index: " + i + "\tParent: " + (int)Math.floor(i-1)/2 + "\tNode Value: " + nVal.val + "\tNode Priority: " + nVal.priorityLevel);
+            i++;
         }
     }
 }

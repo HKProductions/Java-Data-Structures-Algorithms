@@ -35,9 +35,10 @@ public class BinaryHeap {
             if(temp > val) {
                 minMemory.set(index, temp);
                 minMemory.set(parentIndex, val);
+                index = parentIndex;
             }
-
-            index = parentIndex;
+            else
+                break;
         }
     }
 
@@ -52,17 +53,24 @@ public class BinaryHeap {
             if(temp < val) {
                 maxMemory.set(index, temp);
                 maxMemory.set(parentIndex, val);
+                index = parentIndex;
             }
-
-            index = parentIndex;
+            else
+                break;
         }
     }
 
     public int extractMin(){
-        int res = minMemory.get(0);
-        minMemory.set(0, minMemory.get(minMemory.size()-1));
-        minMemory.set(minMemory.size()-1, res);
-        minMemory.remove(minMemory.size()-1);
+        int res;
+        if(minMemory.size() > 0) {
+            res = minMemory.get(0);
+            minMemory.set(0, minMemory.get(minMemory.size() - 1));
+            minMemory.set(minMemory.size() - 1, res);
+            minMemory.remove(minMemory.size() - 1);
+        }
+        else
+            return 0;
+
         int length = minMemory.size();
 
         int parent = 0;
@@ -114,17 +122,24 @@ public class BinaryHeap {
                     break;
             }
             else
-                parent = minMemory.size();
+                break;
         }
 
         return res;
     }
 
     public int extractMax(){
-        int res = maxMemory.get(0);
-        maxMemory.set(0, maxMemory.get(maxMemory.size()-1));
-        maxMemory.set(maxMemory.size()-1, res);
-        maxMemory.remove(maxMemory.size()-1);
+        int res;
+
+        if(maxMemory.size() > 0) {
+            res = maxMemory.get(0);
+            maxMemory.set(0, maxMemory.get(maxMemory.size() - 1));
+            maxMemory.set(maxMemory.size() - 1, res);
+            maxMemory.remove(maxMemory.size() - 1);
+        }
+        else
+            return 0;
+
         int length = maxMemory.size();
 
         int parent = 0;
@@ -176,7 +191,7 @@ public class BinaryHeap {
                     break;
             }
             else
-                parent = maxMemory.size();
+                break;
         }
 
         return res;

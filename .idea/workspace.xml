@@ -17,11 +17,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="480" column="40" selection-start-line="480" selection-start-column="40" selection-end-line="480" selection-end-column="40" />
+            <state relative-caret-position="241">
+              <caret line="498" column="28" selection-start-line="498" selection-start-column="28" selection-end-line="498" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#main#0;class#Main#0" />
                 <element signature="method#testValidAnagram#0;class#Main#0" />
                 <element signature="method#testCountUniqueValues#0;class#Main#0" />
                 <element signature="method#testAveragePair#0;class#Main#0" />
@@ -44,10 +43,25 @@
                 <element signature="method#testStack#0;class#Main#0" />
                 <element signature="method#testQueue#0;class#Main#0" />
                 <element signature="method#testBinarySearchTree#0;class#Main#0" />
-                <element signature="method#testBinaryHeap#0;class#Main#0" />
+                <element signature="method#testPriorityQueue#0;class#Main#0" />
                 <element signature="method#printArray#0;class#Main#0" />
                 <element signature="method#printLinkedList#0;class#Main#0" />
                 <element signature="method#printArrayList#0;class#Main#0" />
+                <element signature="method#printNodeArrayList#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/PriorityQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1247">
+              <caret line="143" column="33" lean-forward="true" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+              <folding>
+                <element signature="method#enqueue#0;class#PriorityQueue#0" />
+                <element signature="method#minBubbleUp#0;class#PriorityQueue#0" />
+                <element signature="method#maxBubbleUp#0;class#PriorityQueue#0" />
               </folding>
             </state>
           </provider>
@@ -56,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/BinaryHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="159" column="56" lean-forward="true" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
+            <state relative-caret-position="278">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
               <folding>
                 <element signature="method#BinaryHeap#0;class#BinaryHeap#0" />
                 <element signature="method#insert#0;class#BinaryHeap#0" />
@@ -104,6 +118,7 @@
         <option value="$PROJECT_DIR$/src/com/company/Stack.java" />
         <option value="$PROJECT_DIR$/src/com/company/TreeTraversalMethods.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinarySearchTree.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PriorityQueue.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryHeap.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
@@ -198,12 +213,12 @@
       <workItem from="1602820994004" duration="3995000" />
       <workItem from="1603157737576" duration="7056000" />
       <workItem from="1604890829287" duration="10668000" />
-      <workItem from="1604975763509" duration="2456000" />
+      <workItem from="1604975763509" duration="9361000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101110000" />
+    <option name="totallyTimeSpent" value="108015000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -256,22 +271,28 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/BinaryHeap.java</url>
-          <line>61</line>
+          <url>file://$PROJECT_DIR$/src/com/company/PriorityQueue.java</url>
+          <line>77</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/BinaryHeap.java</url>
-          <line>123</line>
+          <url>file://$PROJECT_DIR$/src/com/company/PriorityQueue.java</url>
+          <line>144</line>
           <properties />
-          <option name="timeStamp" value="10" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/BinaryHeap.java</url>
-          <line>131</line>
+          <url>file://$PROJECT_DIR$/src/com/company/PriorityQueue.java</url>
+          <line>138</line>
           <properties />
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/PriorityQueue.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -329,26 +350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/SinglyLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
-          <folding>
-            <element signature="method#Node#1;class#Node#0;class#SinglyLinkedList#0" />
-            <element signature="method#Node#2;class#Node#0;class#SinglyLinkedList#0" />
-            <element signature="method#SinglyLinkedList#0;class#SinglyLinkedList#0" />
-            <element signature="method#add#1;class#SinglyLinkedList#0" />
-            <element signature="method#addFirst#0;class#SinglyLinkedList#0" />
-            <element signature="method#addLast#0;class#SinglyLinkedList#0" />
-            <element signature="method#remove#0;class#SinglyLinkedList#0" />
-            <element signature="method#remove#1;class#SinglyLinkedList#0" />
-            <element signature="method#get#0;class#SinglyLinkedList#0" />
-            <element signature="method#set#0;class#SinglyLinkedList#0" />
-            <element signature="method#reverse#0;class#SinglyLinkedList#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="403">
@@ -370,10 +371,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/SinglyLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="200" column="28" selection-start-line="200" selection-start-column="28" selection-end-line="200" selection-end-column="28" />
+          <folding>
+            <element signature="method#Node#1;class#Node#0;class#SinglyLinkedList#0" />
+            <element signature="method#Node#2;class#Node#0;class#SinglyLinkedList#0" />
+            <element signature="method#SinglyLinkedList#0;class#SinglyLinkedList#0" />
+            <element signature="method#add#1;class#SinglyLinkedList#0" />
+            <element signature="method#addFirst#0;class#SinglyLinkedList#0" />
+            <element signature="method#addLast#0;class#SinglyLinkedList#0" />
+            <element signature="method#remove#0;class#SinglyLinkedList#0" />
+            <element signature="method#remove#1;class#SinglyLinkedList#0" />
+            <element signature="method#get#0;class#SinglyLinkedList#0" />
+            <element signature="method#set#0;class#SinglyLinkedList#0" />
+            <element signature="method#reverse#0;class#SinglyLinkedList#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.8/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="472" selection-start-line="472" selection-end-line="472" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.8/lib/src.zip!/java.base/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="371" selection-start-line="371" selection-end-line="371" />
+          <folding>
+            <element signature="e#13945#13946#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.8/lib/src.zip!/java.base/jdk/internal/util/Preconditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/PriorityQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1247">
+          <caret line="143" column="33" lean-forward="true" selection-start-line="143" selection-start-column="33" selection-end-line="143" selection-end-column="33" />
+          <folding>
+            <element signature="method#enqueue#0;class#PriorityQueue#0" />
+            <element signature="method#minBubbleUp#0;class#PriorityQueue#0" />
+            <element signature="method#maxBubbleUp#0;class#PriorityQueue#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BinaryHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="159" column="56" lean-forward="true" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
+        <state relative-caret-position="278">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
           <folding>
             <element signature="method#BinaryHeap#0;class#BinaryHeap#0" />
             <element signature="method#insert#0;class#BinaryHeap#0" />
@@ -385,11 +442,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="480" column="40" selection-start-line="480" selection-start-column="40" selection-end-line="480" selection-end-column="40" />
+        <state relative-caret-position="241">
+          <caret line="498" column="28" selection-start-line="498" selection-start-column="28" selection-end-line="498" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#main#0;class#Main#0" />
             <element signature="method#testValidAnagram#0;class#Main#0" />
             <element signature="method#testCountUniqueValues#0;class#Main#0" />
             <element signature="method#testAveragePair#0;class#Main#0" />
@@ -412,10 +468,11 @@
             <element signature="method#testStack#0;class#Main#0" />
             <element signature="method#testQueue#0;class#Main#0" />
             <element signature="method#testBinarySearchTree#0;class#Main#0" />
-            <element signature="method#testBinaryHeap#0;class#Main#0" />
+            <element signature="method#testPriorityQueue#0;class#Main#0" />
             <element signature="method#printArray#0;class#Main#0" />
             <element signature="method#printLinkedList#0;class#Main#0" />
             <element signature="method#printArrayList#0;class#Main#0" />
+            <element signature="method#printNodeArrayList#0;class#Main#0" />
           </folding>
         </state>
       </provider>
