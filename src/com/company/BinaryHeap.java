@@ -86,7 +86,7 @@ public class BinaryHeap {
                 else if(rightChildVal < parentVal && leftChildVal > rightChildVal){
                     minMemory.set(parent, rightChildVal);
                     minMemory.set(rightChildIndex, parentVal);
-                    parent = rightChildVal;
+                    parent = rightChildIndex;
                 }
                 else
                     break;
@@ -99,6 +99,8 @@ public class BinaryHeap {
                     minMemory.set(leftChildIndex, parentVal);
                     parent = leftChildIndex;
                 }
+                else
+                    break;
             }
             else if(leftChildIndex > length && rightChildIndex < length){
                 rightChildVal = minMemory.get(rightChildIndex);
@@ -106,8 +108,10 @@ public class BinaryHeap {
                 if (rightChildVal < parentVal) {
                     minMemory.set(parent, rightChildVal);
                     minMemory.set(rightChildIndex, parentVal);
-                    parent = rightChildVal;
+                    parent = rightChildIndex;
                 }
+                else
+                    break;
             }
             else
                 parent = minMemory.size();
@@ -144,7 +148,7 @@ public class BinaryHeap {
                 else if(rightChildVal > parentVal && leftChildIndex < rightChildIndex){
                     maxMemory.set(parent, rightChildVal);
                     maxMemory.set(rightChildIndex, parentVal);
-                    parent = rightChildVal;
+                    parent = rightChildIndex;
                 }
                 else
                     break;
@@ -157,6 +161,8 @@ public class BinaryHeap {
                     maxMemory.set(leftChildIndex, parentVal);
                     parent = leftChildIndex;
                 }
+                else
+                    break;
             }
             else if(leftChildIndex > length && rightChildIndex < length){
                 rightChildVal = maxMemory.get(rightChildIndex);
@@ -164,8 +170,10 @@ public class BinaryHeap {
                 if (rightChildVal > parentVal) {
                     maxMemory.set(parent, rightChildVal);
                     maxMemory.set(rightChildIndex, parentVal);
-                    parent = rightChildVal;
+                    parent = rightChildIndex;
                 }
+                else
+                    break;
             }
             else
                 parent = maxMemory.size();
