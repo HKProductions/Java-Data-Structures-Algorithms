@@ -91,7 +91,7 @@ public class BinaryHeap {
                 else
                     break;
             }
-            else if(leftChildIndex < length && rightChildIndex > length){
+            else if(leftChildIndex < length && rightChildIndex >= length){
                 leftChildVal = minMemory.get(leftChildIndex);
 
                 if (leftChildVal < parentVal) {
@@ -102,7 +102,7 @@ public class BinaryHeap {
                 else
                     break;
             }
-            else if(leftChildIndex > length && rightChildIndex < length){
+            else if(leftChildIndex >= length && rightChildIndex < length){
                 rightChildVal = minMemory.get(rightChildIndex);
 
                 if (rightChildVal < parentVal) {
@@ -153,7 +153,7 @@ public class BinaryHeap {
                 else
                     break;
             }
-            else if(leftChildIndex < length && rightChildIndex > length){
+            else if(leftChildIndex < length && rightChildIndex >= length){
                 leftChildVal = maxMemory.get(leftChildIndex);
 
                 if (leftChildVal > parentVal) {
@@ -164,7 +164,7 @@ public class BinaryHeap {
                 else
                     break;
             }
-            else if(leftChildIndex > length && rightChildIndex < length){
+            else if(leftChildIndex >= length && rightChildIndex < length){
                 rightChildVal = maxMemory.get(rightChildIndex);
 
                 if (rightChildVal > parentVal) {

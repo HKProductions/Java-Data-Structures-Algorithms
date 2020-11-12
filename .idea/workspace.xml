@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="497" selection-start-line="497" selection-end-line="497" />
+            <state relative-caret-position="188">
+              <caret line="480" column="40" selection-start-line="480" selection-start-column="40" selection-end-line="480" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#main#0;class#Main#0" />
@@ -44,6 +44,7 @@
                 <element signature="method#testStack#0;class#Main#0" />
                 <element signature="method#testQueue#0;class#Main#0" />
                 <element signature="method#testBinarySearchTree#0;class#Main#0" />
+                <element signature="method#testBinaryHeap#0;class#Main#0" />
                 <element signature="method#printArray#0;class#Main#0" />
                 <element signature="method#printLinkedList#0;class#Main#0" />
                 <element signature="method#printArrayList#0;class#Main#0" />
@@ -55,8 +56,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/BinaryHeap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="181" selection-start-line="181" selection-end-line="181" />
+            <state relative-caret-position="131">
+              <caret line="159" column="56" lean-forward="true" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
               <folding>
                 <element signature="method#BinaryHeap#0;class#BinaryHeap#0" />
                 <element signature="method#insert#0;class#BinaryHeap#0" />
@@ -103,8 +104,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Stack.java" />
         <option value="$PROJECT_DIR$/src/com/company/TreeTraversalMethods.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryHeap.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
       </list>
     </option>
   </component>
@@ -197,12 +198,12 @@
       <workItem from="1602820994004" duration="3995000" />
       <workItem from="1603157737576" duration="7056000" />
       <workItem from="1604890829287" duration="10668000" />
-      <workItem from="1604975763509" duration="919000" />
+      <workItem from="1604975763509" duration="2456000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99573000" />
+    <option name="totallyTimeSpent" value="101110000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -215,6 +216,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21409395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -225,8 +227,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39943343" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
@@ -370,8 +372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/BinaryHeap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        <state relative-caret-position="131">
+          <caret line="159" column="56" lean-forward="true" selection-start-line="159" selection-start-column="56" selection-end-line="159" selection-end-column="56" />
           <folding>
             <element signature="method#BinaryHeap#0;class#BinaryHeap#0" />
             <element signature="method#insert#0;class#BinaryHeap#0" />
@@ -383,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="497" selection-start-line="497" selection-end-line="497" />
+        <state relative-caret-position="188">
+          <caret line="480" column="40" selection-start-line="480" selection-start-column="40" selection-end-line="480" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#main#0;class#Main#0" />
@@ -410,6 +412,7 @@
             <element signature="method#testStack#0;class#Main#0" />
             <element signature="method#testQueue#0;class#Main#0" />
             <element signature="method#testBinarySearchTree#0;class#Main#0" />
+            <element signature="method#testBinaryHeap#0;class#Main#0" />
             <element signature="method#printArray#0;class#Main#0" />
             <element signature="method#printLinkedList#0;class#Main#0" />
             <element signature="method#printArrayList#0;class#Main#0" />

@@ -493,26 +493,12 @@ public class Main {
         printArrayList(bh.returnMin());
         printArrayList(bh.returnMax());
 
-        System.out.println("\n\nMin Value: " + bh.extractMin());
-        System.out.println("Max Value: " + bh.extractMax());
-        printArrayList(bh.returnMin());
-        printArrayList(bh.returnMax());
-        System.out.println("\n\nMin Value: " + bh.extractMin());
-        System.out.println("Max Value: " + bh.extractMax());
-        printArrayList(bh.returnMin());
-        printArrayList(bh.returnMax());
-        System.out.println("\n\nMin Value: " + bh.extractMin());
-        System.out.println("Max Value: " + bh.extractMax());
-        printArrayList(bh.returnMin());
-        printArrayList(bh.returnMax());
-        System.out.println("\n\nMin Value: " + bh.extractMin());
-        System.out.println("Max Value: " + bh.extractMax());
-        printArrayList(bh.returnMin());
-        printArrayList(bh.returnMax());
-        System.out.println("\n\nMin Value: " + bh.extractMin());
-        System.out.println("Max Value: " + bh.extractMax());
-        printArrayList(bh.returnMin());
-        printArrayList(bh.returnMax());
+        for(int i = 0; i < 7; i++) {
+            System.out.println("\n\nMin Value: " + bh.extractMin());
+            System.out.println("Max Value: " + bh.extractMax());
+            printArrayList(bh.returnMin());
+            printArrayList(bh.returnMax());
+        }
 
     }
 
