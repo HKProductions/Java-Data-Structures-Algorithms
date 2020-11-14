@@ -1,7 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -52,6 +51,9 @@ public class Main {
 
         // Data Structure: Priority Queue
         testPriorityQueue();
+
+        // Data Structure: Graphs
+        testGraph();
     }
 
     private static void testValidAnagram(){
@@ -539,6 +541,35 @@ public class Main {
         System.out.println();
     }
 
+    private static void testGraph(){
+        AdjacencyGraph ag = new AdjacencyGraph();
+
+        System.out.println("Adjacency Graph Testing");
+        ag.addVertex("Dallas");
+        ag.addVertex("Tokyo");
+        ag.addVertex("Aspen");
+        ag.addVertex("Los Angeles");
+        ag.addVertex("Hong Kong");
+
+        System.out.println("Testing the adding of vertexes");
+        printGraph(ag.getVertex());
+
+        ag.addEdge("Dallas", "Tokyo");
+        ag.addEdge("Dallas", "Aspen");
+        ag.addEdge("Hong Kong", "Tokyo");
+        ag.addEdge("Hong Kong", "Dallas");
+        ag.addEdge("Los Angeles", "Hong Kong");
+        ag.addEdge("Los Angeles", "Aspen");
+
+        System.out.println("Testing the adding of edges to vertexes");
+        printGraph(ag.getVertex());
+
+        ag.removeVertex("Hong Kong");
+
+        System.out.println("Testing the removal of vertexes");
+        printGraph(ag.getVertex());
+    }
+
     private static void printArray(int[] arr){
         System.out.println();
 
@@ -586,6 +617,23 @@ public class Main {
         for(PriorityQueue.Node nVal : arr){
             System.out.println("Index: " + i + "\tParent: " + (int)Math.floor(i-1)/2 + "\tNode Value: " + nVal.val + "\tNode Priority: " + nVal.priorityLevel);
             i++;
+        }
+    }
+
+    private static void printGraph(HashMap<String, HashSet<String>> v){
+
+        Iterator itr1 = v.entrySet().iterator();
+        while(itr1.hasNext()){
+            Map.Entry pair = (Map.Entry)itr1.next();
+            HashSet<String> value = (HashSet<String>) pair.getValue();
+            Iterator<String> valItr = value.iterator();
+
+            System.out.println("Key: " + pair.getKey());
+            System.out.print("Values: ");
+            while(valItr.hasNext()){
+                System.out.print("  " + valItr.next());
+            }
+            System.out.println("\n");
         }
     }
 }

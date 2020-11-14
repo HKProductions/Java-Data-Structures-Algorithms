@@ -11,6 +11,7 @@ public class commonProblemSolvingMethods {
      */
     public boolean validAnagram(String a, String b){
         /*
+
             Check to see if string lengths match up
                 If not return false
          */
