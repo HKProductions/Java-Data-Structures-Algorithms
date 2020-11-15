@@ -566,8 +566,37 @@ public class Main {
 
         ag.removeVertex("Hong Kong");
 
-        System.out.println("Testing the removal of vertexes");
+        System.out.println("\nTesting the removal of vertexes");
         printGraph(ag.getVertex());
+
+
+        AdjacencyGraph g = new AdjacencyGraph();
+        g.addVertex("A");
+        g.addVertex("B");
+        g.addVertex("C");
+        g.addVertex("D");
+        g.addVertex("E");
+        g.addVertex("F");
+
+        g.addEdge("A", "B");
+        g.addEdge("A", "C");
+        g.addEdge("B", "D");
+        g.addEdge("C", "E");
+        g.addEdge("D", "E");
+        g.addEdge("D", "F");
+        g.addEdge("E", "F");
+
+        System.out.println("Testing out recursive DFS approach");
+        g.recursiveDFS("A");
+        g.recursiveDFS("M");
+
+        System.out.println("\nTesting out iterative DFS approach");
+        g.iterativeDFS("A");
+        g.iterativeDFS("M");
+
+        System.out.println("\nTesting out BFS approach");
+        g.BFS("A");
+        g.BFS("M");
     }
 
     private static void printArray(int[] arr){
