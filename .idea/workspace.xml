@@ -17,8 +17,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="598" column="19" selection-start-line="598" selection-start-column="19" selection-end-line="598" selection-end-column="19" />
+            <state relative-caret-position="324">
+              <caret line="619" column="28" selection-start-line="619" selection-start-column="28" selection-end-line="619" selection-end-column="28" />
               <folding>
                 <element signature="method#testValidAnagram#0;class#Main#0" />
                 <element signature="method#testCountUniqueValues#0;class#Main#0" />
@@ -44,6 +44,7 @@
                 <element signature="method#testBinarySearchTree#0;class#Main#0" />
                 <element signature="method#testBinaryHeap#0;class#Main#0" />
                 <element signature="method#testPriorityQueue#0;class#Main#0" />
+                <element signature="method#testGraph#0;class#Main#0" />
                 <element signature="method#printArray#0;class#Main#0" />
                 <element signature="method#printLinkedList#0;class#Main#0" />
                 <element signature="method#printArrayList#0;class#Main#0" />
@@ -54,10 +55,23 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/WeightedGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
+              <folding>
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-186">
+            <state relative-caret-position="187">
               <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -71,17 +85,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/AdjacencyGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="147" column="9" lean-forward="true" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
+            <state relative-caret-position="171">
+              <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addVertex#0;class#AdjacencyGraph#0" />
-                <element signature="method#addEdge#0;class#AdjacencyGraph#0" />
                 <element signature="method#removeEdge#0;class#AdjacencyGraph#0" />
                 <element signature="method#removeVertex#0;class#AdjacencyGraph#0" />
+                <element signature="method#recursiveDFS#0;class#AdjacencyGraph#0" />
+                <element signature="method#dfsHelper#0;class#AdjacencyGraph#0" />
+                <element signature="method#iterativeDFS#0;class#AdjacencyGraph#0" />
+                <element signature="method#BFS#0;class#AdjacencyGraph#0" />
               </folding>
             </state>
           </provider>
@@ -90,16 +107,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/PriorityQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="141" column="28" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
+            <state relative-caret-position="342">
+              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
-                <element signature="class#Node#0;class#PriorityQueue#0" />
                 <element signature="method#PriorityQueue#0;class#PriorityQueue#0" />
                 <element signature="method#enqueue#0;class#PriorityQueue#0" />
                 <element signature="method#minBubbleUp#0;class#PriorityQueue#0" />
                 <element signature="method#maxBubbleUp#0;class#PriorityQueue#0" />
                 <element signature="method#minDequeue#0;class#PriorityQueue#0" />
                 <element signature="method#maxDequeue#0;class#PriorityQueue#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/company/SortingAlgorithm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2245">
+              <caret line="302" selection-start-line="302" selection-end-line="302" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,11 +185,13 @@
         <option value="$PROJECT_DIR$/src/com/company/Stack.java" />
         <option value="$PROJECT_DIR$/src/com/company/TreeTraversalMethods.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinarySearchTree.java" />
-        <option value="$PROJECT_DIR$/src/com/company/PriorityQueue.java" />
         <option value="$PROJECT_DIR$/src/com/company/BinaryHeap.java" />
         <option value="$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/AdjacencyGraph.java" />
+        <option value="$PROJECT_DIR$/src/com/company/DijkstraAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/com/company/PriorityQueue.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/WeightedGraph.java" />
       </list>
     </option>
   </component>
@@ -260,7 +290,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121041000" />
+    <option name="totallyTimeSpent" value="125003000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -333,7 +363,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/SortingAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="2245">
           <caret line="302" selection-start-line="302" selection-end-line="302" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -434,12 +464,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#validAnagram#0;class#commonProblemSolvingMethods#0" />
+            <element signature="method#countUniqueValuesVer1#0;class#commonProblemSolvingMethods#0" />
+            <element signature="method#countUniqueValuesVer2#0;class#commonProblemSolvingMethods#0" />
+            <element signature="method#averagePair#0;class#commonProblemSolvingMethods#0" />
+            <element signature="method#isSubsequence#0;class#commonProblemSolvingMethods#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/DijkstraAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/AdjacencyGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addVertex#0;class#AdjacencyGraph#0" />
+            <element signature="method#removeEdge#0;class#AdjacencyGraph#0" />
+            <element signature="method#removeVertex#0;class#AdjacencyGraph#0" />
+            <element signature="method#recursiveDFS#0;class#AdjacencyGraph#0" />
+            <element signature="method#dfsHelper#0;class#AdjacencyGraph#0" />
+            <element signature="method#iterativeDFS#0;class#AdjacencyGraph#0" />
+            <element signature="method#BFS#0;class#AdjacencyGraph#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/PriorityQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="141" column="28" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
+        <state relative-caret-position="342">
+          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
-            <element signature="class#Node#0;class#PriorityQueue#0" />
             <element signature="method#PriorityQueue#0;class#PriorityQueue#0" />
             <element signature="method#enqueue#0;class#PriorityQueue#0" />
             <element signature="method#minBubbleUp#0;class#PriorityQueue#0" />
@@ -452,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="598" column="19" selection-start-line="598" selection-start-column="19" selection-end-line="598" selection-end-column="19" />
+        <state relative-caret-position="324">
+          <caret line="619" column="28" selection-start-line="619" selection-start-column="28" selection-end-line="619" selection-end-column="28" />
           <folding>
             <element signature="method#testValidAnagram#0;class#Main#0" />
             <element signature="method#testCountUniqueValues#0;class#Main#0" />
@@ -479,6 +547,7 @@
             <element signature="method#testBinarySearchTree#0;class#Main#0" />
             <element signature="method#testBinaryHeap#0;class#Main#0" />
             <element signature="method#testPriorityQueue#0;class#Main#0" />
+            <element signature="method#testGraph#0;class#Main#0" />
             <element signature="method#printArray#0;class#Main#0" />
             <element signature="method#printLinkedList#0;class#Main#0" />
             <element signature="method#printArrayList#0;class#Main#0" />
@@ -488,31 +557,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/commonProblemSolvingMethods.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/WeightedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state relative-caret-position="663">
+          <caret line="39" column="54" lean-forward="true" selection-start-line="39" selection-start-column="54" selection-end-line="39" selection-end-column="54" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#validAnagram#0;class#commonProblemSolvingMethods#0" />
-            <element signature="method#countUniqueValuesVer1#0;class#commonProblemSolvingMethods#0" />
-            <element signature="method#countUniqueValuesVer2#0;class#commonProblemSolvingMethods#0" />
-            <element signature="method#averagePair#0;class#commonProblemSolvingMethods#0" />
-            <element signature="method#isSubsequence#0;class#commonProblemSolvingMethods#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/AdjacencyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="147" column="9" lean-forward="true" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addVertex#0;class#AdjacencyGraph#0" />
-            <element signature="method#addEdge#0;class#AdjacencyGraph#0" />
-            <element signature="method#removeEdge#0;class#AdjacencyGraph#0" />
-            <element signature="method#removeVertex#0;class#AdjacencyGraph#0" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
           </folding>
         </state>
       </provider>

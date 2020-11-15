@@ -29,6 +29,14 @@ public class PriorityQueue {
         return maxQueue;
     }
 
+    public int minQueueLength(){
+        return minQueue.size();
+    }
+
+    public int maxQueueLength(){
+        return maxQueue.size();
+    }
+
     public void enqueue(int value, int priority){
         Node data = new Node(value, priority);
 

@@ -54,6 +54,8 @@ public class Main {
 
         // Data Structure: Graphs
         testGraph();
+
+        testDijkstra();
     }
 
     private static void testValidAnagram(){
@@ -597,6 +599,25 @@ public class Main {
         System.out.println("\nTesting out BFS approach");
         g.BFS("A");
         g.BFS("M");
+    }
+
+    private static void testDijkstra(){
+        WeightedGraph wg = new WeightedGraph();
+        wg.addVertex(1);
+        wg.addVertex(2);
+        wg.addVertex(3);
+        wg.addVertex(4);
+        wg.addVertex(5);
+        wg.addVertex(6);
+
+        wg.addEdge(1, 2, 4);
+        wg.addEdge(1, 3, 2);
+        wg.addEdge(2, 5, 3);
+        wg.addEdge(3, 4, 2);
+        wg.addEdge(3, 6, 4);
+        wg.addEdge(4, 5, 3);
+        wg.addEdge(4, 6, 1);
+        wg.addEdge(5, 6, 1);
     }
 
     private static void printArray(int[] arr){
